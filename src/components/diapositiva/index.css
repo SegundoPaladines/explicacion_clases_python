@@ -1,0 +1,9 @@
+.desaparece{
+    display: none;
+}
+.normal{
+    display: block;
+}
+.contenedor{
+    background: rgba(77, 92, 79, 0.5);
+}

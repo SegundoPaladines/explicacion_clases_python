@@ -1,19 +1,49 @@
-import { Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from '@mui/material';
-import React from 'react';
+import { Box, Button, Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { Code } from '../code';
+import './index.css';
 
 type diapo ={
     titulo?:string | null;
     texto?:string | null;
-    codigo?:string | null;
+    codigo?:string| null;
     img?:string | null;
 }
 
 export const Diapositiva:React.FC <diapo> = ({titulo, texto, codigo, img}) =>{
+    const [code, setCode] = useState<JSX.Element>(<></>);
+    const [explicacion, setExplicacion] = useState(false);
+
+    const colocarCodigo = () =>{
+        if(codigo !== null && codigo !== undefined){
+            const tmp =(
+                <Code 
+                    codigo={codigo}
+                    lenguaje='python'
+                />
+            );
+            setCode((prev)=> prev = tmp);
+            setExplicacion((prev)=> prev = true);
+        }
+    }
+
+    const quitarCodigo = () => {
+        setCode((prev)=> prev = <></>);
+        setExplicacion((prev)=> prev = false);
+    }
+
     return (
-        <Grid>
-            <Grid item xs={10}>
-                <Card>
-                    <CardActionArea>
+        <div
+            style={{
+                boxShadow: '10px 20px 10px rgba(0, 0, 0, 0.7)',
+            }}
+        >
+            <Grid >
+                <Grid 
+                    item 
+                    xs={10}
+                >
+                    <Card>
                         { img !== undefined && img!==null && <CardMedia
                                                     component="img"
                                                     height="140"
@@ -21,14 +51,16 @@ export const Diapositiva:React.FC <diapo> = ({titulo, texto, codigo, img}) =>{
                                                     alt="green iguana"
                                                 />
                         }
-                        <CardContent>
+                        <CardContent
+                            className='contenedor'
+                        >
                             { titulo !== undefined && <Typography 
                                                             gutterBottom 
                                                             variant="h5" 
                                                             component="div"
                                                         >
                                                             {titulo}
-                                                       </Typography>
+                                                        </Typography>
 
                             }
                             { texto !== undefined && <Typography 
@@ -39,10 +71,34 @@ export const Diapositiva:React.FC <diapo> = ({titulo, texto, codigo, img}) =>{
                                                     </Typography>
                                 
                             }
+                            <div>
+                                {code}
+                            </div>
+                            {codigo !== undefined  &&<Box>
+                                                        <div
+                                                            className={explicacion ? 'desaparece':'normal'}
+                                                        >
+                                                            <Button
+                                                                onClick={colocarCodigo}
+                                                            >
+                                                                Ver Ejemplo
+                                                            </Button>
+                                                        </div>
+                                                        <div
+                                                            className={explicacion ? 'normal':'desaparece'}
+                                                        >
+                                                            <Button 
+                                                                onClick={quitarCodigo}
+                                                            >
+                                                                Ocultar Ejemplo
+                                                            </Button>
+                                                        </div>
+                                                    </Box>
+                            }     
                         </CardContent>
-                    </CardActionArea>
-                </Card>
+                    </Card>
+                </Grid>
             </Grid>
-        </Grid>
+        </div>
     );
 }

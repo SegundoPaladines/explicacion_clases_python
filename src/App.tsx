@@ -1,6 +1,6 @@
 import './App.css';
 import { Container, Button } from '@mui/material';
-import { NavBar, HeaderComponent, Fondo, Diapositiva} from './components/index'
+import { NavBar, HeaderComponent, Fondo, Diapositiva, Code} from './components/index';
 
 function App() {
   return (
@@ -30,8 +30,12 @@ function App() {
           padding:"2rem",
         }}
       >
-        <Diapositiva 
-        
+        <Diapositiva
+        titulo="Clases"
+codigo={`
+def otroEjemplo():
+  print('otro ejemplo')
+`}
         />
       </Container>
     </div>
