@@ -7,3 +7,10 @@
 .contenedor{
     background: rgba(77, 92, 79, 0.5);
 }
+.ctn{
+    margin-top: 2rem;
+    box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.7);
+}
+.ctn:hover{
+    transform: scale(1.2);
+}

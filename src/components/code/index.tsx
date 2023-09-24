@@ -20,7 +20,7 @@ export const Code:React.FC<codeProps> = ({codigo, lenguaje}) =>{
             }else{
                 clearInterval(intervalo);
             }
-        },50);
+        },20);
 
         return () => clearInterval(intervalo);
     }, [code, caracaterActual]);

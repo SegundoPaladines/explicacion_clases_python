@@ -34,9 +34,7 @@ export const Diapositiva:React.FC <diapo> = ({titulo, texto, codigo, img}) =>{
 
     return (
         <div
-            style={{
-                boxShadow: '10px 20px 10px rgba(0, 0, 0, 0.7)',
-            }}
+            className='ctn'
         >
             <Grid >
                 <Grid 
