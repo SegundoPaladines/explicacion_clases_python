@@ -253,14 +253,14 @@ def presentarse(self):
                 onClick={() => {
                   window.location.href = "https://github.com/SegundoPaladines/ClasesPython";
                 }}
-              >Ver Ejemplo de Aplicacion 1</Button>
+              >See an Exmaple: Creating Objetcs With Commands</Button>
             </div>
             <div>
               <Button variant='outlined'
                 onClick={() => {
-                  window.location.href = "https://github.com/SegundoPaladines/ZombieKiller";
+                  window.location.href = "https://segundopaladines.github.io/ZombieKillerDeploy/";
                 }}
-              >Ver Ejemplo de Aplicacion 2</Button>
+              >See an Example: ZombieKiller</Button>
             </div>
           </div>
         </Box>
