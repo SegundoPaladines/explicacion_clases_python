@@ -18,7 +18,7 @@ function App() {
         }}>
           <HeaderComponent 
             title='Python'
-            descripton='Clases, Objetos, Herencia, Polimorfismo y Encapsulamiento.'
+            descripton='Clases, Objetos, Encapsulamiento, Herencia, Polimorfismo y Funciones.'
           />
         </div>
       <Container 
@@ -208,10 +208,49 @@ class Profesor(Persona):
       return super().imprimirPersona()+" materia: "+self._materia + "Institucion Educativa: "+self._ieducativa
 `}
         />
+
+      <Diapositiva
+        titulo="Funciones"
+        texto="
+        Las funciones, dentro del paradigma de la POO, son algoritmos incorporados dentro de la definición
+        de una clase, de manera que los objetos generados a partir de la misma puedan realizar operaciones a fin de
+        lograr un objetivo concteto.
+        "
+codigo={`
+
+#Se define una funcion en la clase estudiante
+def presentarse(self):
+  return super().presentarse() + ", estudio "+self._carrera
+
+#-------------------------------------------------------------------------------------------
+#main <- funcion para crear estudiantes
+def crearEstudiante():
+    cedula = input("cedula: ")
+    nombre = input("nombre: ")
+    apellido = input("apellido: ")
+    edad = input("edad: ")
+    carrera = input("Carrera que cursa: ")
+
+    estudiantes.append(Estudiante(cedula, nombre, apellido, edad, carrera, []))
+
+#main <- utilizar la funcion presentarse del estudiante
+def presentarEstudiante():
+    cedula = input("cedula")
+
+    for estudiante in estudiantes:
+        if(estudiante.get_cedula() == cedula):
+            escribir(estudiante.presentarse()+"\n")
+            return True
+
+    print("La cedula especificada no corresponde a ningun estudiante")
+
+`}
+        />
+
       <Diapositiva
         titulo="Polimorfismo"
         texto="
-          La herencia, dentro del paradigma de la POO, puede definirse como la capacidad que tienen
+          EL polimorfismo, dentro del paradigma de la POO, puede definirse como la capacidad que tienen
           los objetos que pertenecen a una misma jerarquia de clases para responder de forma diferente
           a la invocacion de un método.
         "
