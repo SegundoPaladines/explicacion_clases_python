@@ -210,20 +210,20 @@ class Profesor(Persona):
         />
 
       <Diapositiva
-        titulo="Funciones"
+        titulo="Métodos"
         texto="
-        Las funciones, dentro del paradigma de la POO, son algoritmos incorporados dentro de la definición
+        Los métodos, dentro del paradigma de la POO, son algoritmos incorporados dentro de la definición
         de una clase, de manera que los objetos generados a partir de la misma puedan realizar operaciones a fin de
         lograr un objetivo concteto.
         "
 codigo={`
 
-#Se define una funcion en la clase estudiante
+#Se define una función en la clase estudiante
 def presentarse(self):
   return super().presentarse() + ", estudio "+self._carrera
 
 #-------------------------------------------------------------------------------------------
-#main <- funcion para crear estudiantes
+#main <- función para crear estudiantes
 def crearEstudiante():
     cedula = input("cedula: ")
     nombre = input("nombre: ")
@@ -233,7 +233,7 @@ def crearEstudiante():
 
     estudiantes.append(Estudiante(cedula, nombre, apellido, edad, carrera, []))
 
-#main <- utilizar la funcion presentarse del estudiante
+#main <- utilizar el método presentarse del estudiante
 def presentarEstudiante():
     cedula = input("cedula")
 
