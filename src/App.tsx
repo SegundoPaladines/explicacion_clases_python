@@ -1,6 +1,6 @@
 import './App.css';
 import { Container, Button, Box } from '@mui/material';
-import { NavBar, HeaderComponent, Fondo, Diapositiva, Code} from './components/index';
+import { NavBar, HeaderComponent, Fondo, Diapositiva} from './components/index';
 
 function App() {
   return (
@@ -287,14 +287,18 @@ def presentarse(self):
           }}
         >
           <div>
-            <div>
+            <div style={{
+              marginBottom:10,
+            }}>
               <Button variant='outlined'
                 onClick={() => {
                   window.location.href = "https://github.com/SegundoPaladines/ClasesPython";
                 }}
               >See an Exmaple: Creating Objetcs With Commands</Button>
             </div>
-            <div>
+            <div style={{
+              marginBottom:10,
+            }}>
               <Button variant='outlined'
                 onClick={() => {
                   window.location.href = "https://segundopaladines.github.io/ZombieKillerDeploy/";

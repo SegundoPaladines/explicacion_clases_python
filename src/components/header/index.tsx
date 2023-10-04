@@ -37,7 +37,7 @@ export const HeaderComponent: React.FC<headerProps> = ({title, descripton, eleme
         return ()=> {
             clearInterval(intervalo);
         }
-    }, [textoActual]);
+    });
 
     return (
         <div
@@ -64,6 +64,7 @@ export const HeaderComponent: React.FC<headerProps> = ({title, descripton, eleme
                     <Grid 
                         item
                         xs={10}
+                        key="key-prop-container"
                     >
                         <Grid 
                             container
