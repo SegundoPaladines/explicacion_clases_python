@@ -44,9 +44,10 @@ export const Diapositiva:React.FC <diapo> = ({titulo, texto, codigo, img}) =>{
                     <Card>
                         { img !== undefined && img!==null && <CardMedia
                                                     component="img"
-                                                    height="140"
+                                                    width="100%"
+                                                    height="auto"
                                                     image={img}
-                                                    alt="green iguana"
+                                                    alt="Img"
                                                 />
                         }
                         <CardContent

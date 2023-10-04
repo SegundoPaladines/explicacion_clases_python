@@ -18,7 +18,7 @@ function App() {
         }}>
           <HeaderComponent 
             title='Python'
-            descripton='Clases, Objetos, Encapsulamiento, Herencia, Polimorfismo y Funciones.'
+            descripton='Clases, Objetos, Encapsulamiento, Herencia, Polimorfismo y Métodos.'
           />
         </div>
       <Container 
